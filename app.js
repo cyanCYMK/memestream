@@ -2,10 +2,18 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 5001
-app.get('/', function(req, res) {
-	res.send('memestream');
-});
-app.listen(port, function() {
-	console.log('memestream app listening on port 3000');
+
+const { App } = require('@slack/bolt');
+
+// Initializes your app with your bot token and signing secret
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN,
+  signingSecret: process.env.SLACK_SIGNING_SECRET
 });
 
+(async () => {
+  // Start your app
+  await app.start(process.env.PORT || 3000);
+
+  console.log('⚡️ memestream app is running!');
+})();

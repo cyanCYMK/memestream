@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "@slack/bolt": "^3.21.1",
     "express": "^4.19.2"
   },
   "devDependencies": {},
