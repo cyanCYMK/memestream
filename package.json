@@ -4,8 +4,15 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "@slack/bolt": "^3.21.1",
-    "express": "^4.19.2"
+    "@slack/bolt": "^3.21.4",
+    "@twurple/api": "^7.1.0",
+    "@twurple/auth": "^7.1.0",
+    "@twurple/eventsub-ws": "^7.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "passport-twitch-new": "^0.0.3"
   },
   "devDependencies": {},
   "scripts": {
